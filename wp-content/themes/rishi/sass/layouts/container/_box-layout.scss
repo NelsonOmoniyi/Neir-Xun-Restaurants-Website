@@ -1,0 +1,154 @@
+/*===============================
+Box Layout
+==============================*/
+.box-layout{
+    .post-content{
+        background: #FFF;
+        
+        .entry-content-main-wrap{
+            .list-cont-wrap{
+                @include media(sm){
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+
+    &.blog-classic{
+        .site-main{
+            .rishi-container-wrap{
+                padding: 0;
+                background: none;
+            }
+        }
+        .entry-content-main-wrap{
+            padding: 40px;
+            @include media(sm){
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+            .rt-featured-image{
+                margin-left: -40px;
+                margin-right: -40px;
+                @include media(sm){
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+            }
+            div:first-of-type.entry-content-wrap{
+                padding: 0 0 20px;
+            }
+        }
+        .rishi-post{
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+    }
+    &.blog-list{
+        .site-main{
+            .rishi-container-wrap{
+                padding: 0;
+                background: none;
+                .rishi-post {
+                    width: 100%;
+                }
+            }
+        }
+    }
+    &.blog-grid{
+        .site-main{
+            .rishi-container-wrap{
+                background: none;
+                padding: 0;
+                margin-left: -15px;
+                margin-right: -15px;
+                @include media(sm){
+                    margin-left: 0;
+                    margin-right: 0;
+                }
+            }
+            .entry-content-main-wrap{
+                padding: 30px;
+                @include media(sm){
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+            }
+            div + .post-thumb,
+            header + .post-thumb{
+                margin-top: 0;
+            }
+            .rishi-post{
+                padding-right: 15px;
+                padding-left: 15px;
+                @include media(sm){
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-bottom: 60px;
+                }
+            }
+        }
+    }
+    &.blog-grid-masonry{
+        #primary{
+            margin-bottom: 30px;
+            @include media(sm){
+                margin-bottom: 10px;
+            }
+        }
+        .site-main{
+            .rishi-container-wrap{
+                background: none;
+                padding: 0;
+            }
+            .entry-content-main-wrap{
+                padding: 30px;
+                @include media(sm){
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+            }
+        }
+    }
+    &.single-post{
+        .site-main{
+            .rishi-container-wrap{
+                background-color: var(--background-color);
+                background-image: var(--overlay-color, none), var(--background-image);
+                background-size: var(--background-size);
+                background-repeat: var(--background-repeat);
+                background-position: var(--background-position);
+                background-attachment: var(--background-attachment);
+                --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+                border-radius: var(--box-radius);
+                box-shadow: var(--box-shadow);
+                padding: var(--padding);
+
+                @include media(sm){
+                    margin-left: -15px;
+                    margin-right: -15px;
+                }
+            }
+        }
+    }
+    &.page{
+        .site-main{
+            .rishi-container-wrap{
+                .rishi-post{
+                    padding-top: 20px;
+                }
+            }
+        }
+    }
+
+    .rishi-post{
+        margin-bottom: 60px;
+        @include media(sm){
+            margin-bottom: 40px;
+        }
+
+    }
+}

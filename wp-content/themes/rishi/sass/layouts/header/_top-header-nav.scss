@@ -1,0 +1,38 @@
+/*===============================
+Top Header Navigation Menu
+==============================*/
+.header-top-wrap{
+    .menu{
+        padding: 0;
+        margin: 0;
+        list-style: none;
+        li{
+            display: inline-block;
+            position: relative;
+            margin-right: 2.22222em;
+            
+            &:last-child{
+                margin-right: 0;
+            }
+            
+            a{
+                text-decoration: none;
+                display: block;
+                line-height: 1;
+                padding: 2px 0;
+            }
+            .sub-menu{
+                margin-left: -99999px;
+                position: absolute;
+                top: 100%;
+                left: 0;
+            }
+        }
+    }
+    a{
+        
+        &:focus{
+            outline: dotted 1px rgba(255,255,255,0.6);
+        }
+    }
+}

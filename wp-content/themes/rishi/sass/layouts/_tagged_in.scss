@@ -1,0 +1,28 @@
+/*===============================
+Tagged in / Category Top 
+==============================*/
+.tagged-in-wrapper{
+    display: block;
+    margin: var(--margin) 0;
+    // max-width: 800px;
+    width: 100%;
+}
+.rishi-tagged-inner{
+    .tagged-in{
+        color: var(--archiveFontColor);
+        margin: 0;
+    }
+    .category-title{
+        color: var(--archiveFontColor);
+        font-size: 1.777em;
+        margin: 10px 0 0;
+        @include media(sm){
+            font-size: 1.44444em;
+        }
+    }
+    .archive-description{
+        color: var(--archiveFontColor);
+        line-height: var(--lineHeight, 2em);
+        margin-top: 10px;
+    }
+}

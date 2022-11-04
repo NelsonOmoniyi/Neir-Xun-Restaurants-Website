@@ -1,0 +1,114 @@
+/*============================
+ Common Site Style
+============================*/
+.clearfix:after{
+	display: block;
+	clear: both;
+	content: '';
+}
+
+/**** Visibility Css *****/
+
+@media (max-width: 689.98px) {
+    .cb__hidden-sm{
+        display: none !important;
+    }
+}
+
+@media (min-width: 690px) and (max-width: 999.98px) {
+    .cb__hidden-md {
+        display: none !important;
+    }
+}
+
+@media (min-width: 1000px) {
+    .cb__hidden-lg {
+        display: none !important;
+    }
+}
+
+.hidden,
+[hidden] {
+    display: none !important;
+}
+
+.rt-no-image {
+    background: rgba(233, 235, 239, 0.8);
+    &:before {
+        position: absolute;
+        content: "";
+        opacity: 0.3;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        margin: auto;
+        height: 50px;
+        color: #536065;
+        text-align: center;
+        padding-top: 50px;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' fill='none' stroke='%23536065' stroke-width='1' stroke-linecap='round' stroke-linejoin='round'%3E%3Crect x='3' y='3' width='18' height='18' rx='2' ry='2'/%3E%3Ccircle cx='8.5' cy='8.5' r='1.5'/%3E%3Cpath d='M21 15l-5-5L5 21'/%3E%3C/svg%3E");
+        background-size: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+}
+
+/************************************/
+
+.customizer_builder__container , .rishi-container{
+	max-width: var(--containerWidth);
+    margin-left: auto;
+    margin-right: auto;
+	padding: 0 15px;
+
+    /***** Content Vertical Margin **********/
+    .main-content-wrapper{
+        margin-bottom: var(--containerVerticalMargin);
+        margin-top: var(--containerVerticalMargin);
+    }
+
+    &[data-strech="full"]{
+        max-width: 100%;
+        width: 100%;
+        padding: 0 var(--streched-padding);
+    }
+}
+
+.rishi-container-stretch{
+    width: 100%;
+    padding: 0;
+}
+.rishi-flex{
+    @include flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+}
+.rishi-flex-wrap{
+    margin-left: -15px;
+    margin-right: -15px;
+}
+.rishi-foot-main-col{
+    padding: 0 15px;
+}
+
+.archive-title-wrapper {
+    background-color: var(--background-color);
+    background-image: var(--overlay-color, none), var(--background-image);
+    background-size: var(--background-size);
+    background-repeat: var(--background-repeat);
+    background-position: var(--background-position);
+    background-attachment: var(--background-attachment);
+    --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+    padding: var(--padding) auto;
+    text-align: var(--alignment);
+}
+
+.admin-bar{
+    .search-toggle-form{
+        .btn-form-close{
+            top: 62px;
+        }
+    } 
+}

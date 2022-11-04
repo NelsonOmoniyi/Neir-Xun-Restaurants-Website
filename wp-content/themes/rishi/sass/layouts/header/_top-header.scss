@@ -1,0 +1,214 @@
+/*===============================
+Top Header
+==============================*/
+.header-top-wrap{
+    background: var(--primaryColor);
+    font-size: 0.77778em;
+    font-weight: 400;
+    letter-spacing: 0.3px;
+    color: rgba(255,255,255,0.5);
+    
+    
+    a{
+        color: rgba(255,255,255,0.5);
+        @include transition(all ease 0.3s);
+        
+        &:hover{
+            color: #FFF;
+        }
+    }
+    
+    .top-head-wrap{
+        -webkit-justify-content: space-between;
+        justify-content: space-between;
+        -webkit-align-items: center;
+        align-items: center;
+        padding: 8px 0;
+    }
+    .rishi-top-header-right-content{
+        @include flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        -webkit-align-items: center;
+        align-items: center;
+        -webkit-justify-content: flex-end;
+        justify-content: flex-end;
+    }
+    .rishi-top-header-left-content,
+    .rishi-top-header-right-content{
+        width: 50%;
+    }
+    .rishi-top-header-left-content{
+        padding-right: 15px;
+    }
+    .rishi-top-header-right-content{
+        padding-left: 15px;
+    }
+    .widget{
+        font-size: 18px;
+        width: 100%;
+        li{
+            color: rgba(255,255,255,0.5);
+        }
+        a{
+            color: rgba(255,255,255,0.5);
+        }
+        .widget-title{
+            font-size: 1.1111em;
+            color: rgba(255,255,255,0.9);
+        }
+        &.widget_text{
+            p{
+                font-size: 0.83333em;
+            }
+        }
+        .custom-html-widget{
+            font-size: 0.83333em;
+        }
+        &.widget_archive{
+            ul{
+                li{
+                    a{
+                        color: rgba(255,255,255,0.5);
+                        
+                        &:hover{
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+            }
+        }
+        &.widget_calendar{
+            .calendar_wrap{
+                td#today{
+                    background: rgba(255,255,255,0.5);
+                }
+                th,
+                td{
+                    color: rgba(255,255,255,0.5);
+                }
+                thead{
+                    tr th{
+                        border-bottom: solid 1px rgba(255,255,255,0.1);
+                    }
+                }
+                .wp-calendar-nav-next a{
+                    &:after{
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 15px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='17.562' height='13.244' viewBox='0 0 17.562 13.244'%3E%3Cg id='Group_762' data-name='Group 762' transform='translate(0.75 1.061)'%3E%3Cpath id='Path_4' data-name='Path 4' d='M3290.465,368.331l5.561,5.561-5.561,5.561' transform='translate(-3280.275 -368.331)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3Cline id='Line_5' data-name='Line 5' x2='14.523' transform='translate(0 6)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat;
+                        -webkit-background-size: 17px;
+                        -o-background-size: 17px;
+                        background-size: 17px;
+                    }
+                }
+                .wp-calendar-nav-prev a{
+                    &:after{
+                        content: "";
+                        display: inline-block;
+                        width: 20px;
+                        height: 15px;
+                        background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16.333' height='13.244' viewBox='0 0 16.333 13.244'%3E%3Cg id='Group_763' data-name='Group 763' transform='translate(1.061 1.061)'%3E%3Cpath id='Path_5' data-name='Path 5' d='M3296.026,368.331l-5.561,5.561,5.561,5.561' transform='translate(-3290.464 -368.331)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3Cline id='Line_6' data-name='Line 6' x1='14.523' transform='translate(0 6)' fill='none' stroke='%23ffffff' stroke-linecap='round' stroke-width='1.5'/%3E%3C/g%3E%3C/svg%3E%0A") no-repeat;
+                        -webkit-background-size: 17px;
+                        -o-background-size: 17px;
+                        background-size: 17px;
+                    }
+                }
+            }
+            caption{
+                background: rgba(255,255,255,0.1);
+                color: rgba(255,255,255,0.8);
+            }
+        }
+        &.widget_categories,
+        &.widget_recent_entries,
+        &.widget_pages{
+            ul{
+                li{
+                    a{
+                        color: rgba(255, 255, 255, 0.5);
+                        &:hover{
+                            color: rgba(255, 255, 255, 1);
+                        }
+                    }
+                }
+            }
+        }
+        &.widget_meta{
+            ul{
+                li{
+                    a{
+                        color: rgba(255, 255, 255, 0.5);
+                    }
+                    &:before{
+                        background: rgba(255, 255, 255, 0.5);
+                    }
+                }
+            }
+        }
+        &.widget_nav_menu{
+            ul{
+                li{
+                    background: rgba(255,255,255,0.1);
+                    margin: 0 0 5px;
+                    .arrow-down{
+                        &:after{
+                            color: rgba(255, 255, 255, 0.5);
+                        }
+                    }
+                    
+                    ul{
+                        background: none;
+                        margin-left: 0;
+                        position: relative;
+                        li{
+                            background: none;
+                            &:before{
+                                background: rgba(255, 255, 255, 0.5);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        &.widget_recent_comments{
+            ul{
+                li{
+                    .comment-author-link a,
+                    a{
+                        color: rgba(255, 255, 255, 0.5);
+                        &:hover{
+                            color: #FFF;
+                        }
+                    }
+                }
+            }
+        }
+        &.widget_tag_cloud{
+            .tagcloud{
+                a{
+                    color: rgba(255, 255, 255, 0.5);
+                    &:hover{
+                        color: #FFF;
+                        border-color: #FFF;
+                    }
+                }
+            }
+        }
+    }
+}
+.header-top-wrap .comments-area,
+.header-top-wrap .navigation.pagination .page-numbers.current,
+.header-top-wrap .widget.widget_archive ul,
+.header-top-wrap .widget.widget_categories ul,
+.header-top-wrap .widget.widget_recent_comments ul,
+.header-top-wrap .widget.widget_meta ul,
+.header-top-wrap .widget.widget_tag_cloud .tagcloud,
+.header-top-wrap .widget_calendar table thead tr,
+.header-top-wrap .widget_calendar table thead tr{
+    border-color: rgba(255,255,255,0.1);
+}
+

@@ -1,0 +1,112 @@
+/*===============================
+Search Layouts
+==============================*/
+.search-result-wrapper{
+    display: block;
+    max-width: 770px;
+    width: 100%;
+    margin: var(--margin) 0;
+    @include media(md){
+        max-width: 100%;;
+    }
+    .rishi-searchres-inner{
+        .search-res{
+            color: var(--searchFontColor);
+            display: block;
+            text-align: var(--alignment);
+            width: 100%;
+            margin-bottom: 20px;
+        }
+        .search-form{
+            width: 100%;
+            position: relative;
+            
+            input[type="search"]{
+                -webkit-appearance: none;
+                -moz-appearance: none;
+                appearance: none;
+                width: 100%;
+                height: 70px;
+                line-height: 70px;
+                font-size: 1.33333em;
+                color: var(--searchFontColor);
+                
+                @include media(sm){
+                    height: 60px;
+                    line-height: 60px;
+                    font-size: 1em;
+                }
+
+                &::placeholder{
+                    color: var(--searchFontColor);
+                }
+            }
+    
+            input[type="submit"]{
+                position: absolute;
+                top: 0;
+                right: 0;
+                text-indent: -999px;
+                height: 70px;
+                width: 70px;
+                background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.86' height='26.434' viewBox='0 0 25.86 26.434'%3E%3Cpath id='icons8-search' d='M13.768,3a9.768,9.768,0,1,0,5.71,17.686l7.559,7.541,1.616-1.616-7.469-7.487A9.767,9.767,0,0,0,13.768,3Zm0,1.149a8.619,8.619,0,1,1-8.619,8.619A8.609,8.609,0,0,1,13.768,4.149Z' transform='translate(-3.5 -2.5)' fill='%23fff' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
+                background-repeat: no-repeat !important;
+                -webkit-background-size: 24px !important;
+                -o-background-size: 24px !important;
+                background-size: 24px !important;
+                background-position: center;
+                background-color: var(--genLinkColor);
+                padding: 0;
+                border: none;
+                border-radius: 0;
+                @include media(sm){
+                    height: 60px;
+                    width: 60px;
+                    line-height: 60px;
+                    -webkit-background-size: 20px !important;
+                    -o-background-size: 20px !important;
+                    background-size: 20px !important;
+                }
+            }
+        }
+    }
+
+    .rt-search-results {
+        display: none;
+    }
+}
+
+.rishi-search-count{
+    width: 100%;
+    .srch-results-cnt{
+        display: block;
+        font-size: 0.88889em;
+        font-weight: 300;
+        font-style: italic;
+        color: var(--archiveFontColor);
+        margin-bottom: var(--archiveMargin);
+        position: relative;
+        @include media(sm){
+            padding-bottom: 10px;
+        }
+    }
+}
+
+.search-no-results{
+    &.blog-grid,
+    &.blog-grid-masonry {
+        .no-results {
+            padding: 0 15px;
+            width: 100%;
+        }
+        &.default-layout{
+            .no-results {
+                padding: 0 30px;
+                width: 100%;
+            }
+        }
+    }
+    .rishi-container-wrap.masonry_grid {
+        height: auto !important;
+    }
+}

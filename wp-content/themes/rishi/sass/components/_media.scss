@@ -1,0 +1,72 @@
+/*--------------------------------------------------------------
+# Media
+--------------------------------------------------------------*/
+.page-content .wp-smiley,
+.entry-content .wp-smiley,
+.comment-content .wp-smiley {
+    border: none;
+    margin-bottom: 0;
+    margin-top: 0;
+    padding: 0;
+}
+
+/* Make sure embeds and iframes fit their containers. */
+embed,
+iframe,
+object {
+    max-width: 100%;
+}
+
+/* Make sure logo link wraps around logo image. */
+.custom-logo-link {
+    display: inline-block;
+}
+
+//feature image caption
+.rt-featured-image {
+    position: relative;
+
+    .rt-caption-wrap {
+        color: var(--captionColor);
+        font-family: var(--fontFamily);
+        font-weight: var(--fontWeight);
+        font-size: var(--fontSize);
+        text-transform: var(--textTransform);
+        text-decoration: var(--textDecoration);
+        line-height: var(--lineHeight);
+        letter-spacing: var(--letterSpacing);
+        padding: var(--captionPadding);
+        background-color: var(--captionOverlayColor);
+
+        &[data-layout="layout-1"][data-alignment="left"] {
+            left: 0;
+        }
+
+        &[data-layout="layout-1"][data-alignment="right"] {
+            right: 0;
+        }
+
+        &[data-layout="layout-1"][data-alignment="center"] {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+
+        &[data-layout="layout-2"][data-alignment="left"] {
+            text-align: left;
+        }
+
+        &[data-layout="layout-2"][data-alignment="right"] {
+            text-align: right;
+        }
+
+        &[data-layout="layout-2"][data-alignment="center"] {
+            text-align: center;
+        }
+
+        &[data-layout="layout-1"] {
+            position: absolute;
+            bottom: 8px;
+
+        }
+    }
+}

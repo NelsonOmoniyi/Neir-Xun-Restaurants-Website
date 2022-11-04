@@ -1,0 +1,27 @@
+//flex
+@mixin flex($flex...) {
+	display: -webkit-box;
+	display: -moz-box;
+	display: -ms-flexbox;
+	display: -webkit-flex;
+	display: flex;
+}
+
+@mixin flexbasis($flexbasis...){
+	-webkit-flex-basis: 0;
+	flex-basis: 0;
+	-webkit-flex-grow: 1;
+	flex-grow: 1;
+}
+
+@mixin flexwrap($value){
+	-webkit-flex-wrap: $value;
+	-moz-flex-wrap : $value;
+	-ms-flex-wrap: $value;
+	flex-wrap: $value;
+}
+
+@mixin  align-item($value) {
+	-webkit-align-items: $value;
+	align-items: $value;
+}

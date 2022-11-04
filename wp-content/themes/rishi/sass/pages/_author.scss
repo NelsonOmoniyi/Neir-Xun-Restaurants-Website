@@ -1,0 +1,175 @@
+/*===============================
+Author Page
+==============================*/
+.author{
+    &.leftsidebar{
+        #primary{
+            float: right;
+        }
+        #secondary{
+            float: left;
+        }
+    }
+
+    &.content-box-layout{
+        .author-top-wrap{
+            padding-top: 20px;
+        }
+        #primary, #secondary{
+            margin-bottom: 20px;
+        }
+    }
+
+    .entry-content-main-wrap{
+        .entry-title{
+            font-size: var(--authorHeadingFontSize);
+        }
+        
+        .post-meta-wrapper{
+            .post-meta-inner{
+                .cat-links{
+                    &[data-cat-style="normal"]{
+                        a{
+                            color: var(--authorCategoryDividerInitialColorFirst);
+            
+                            &:hover{
+                                color: var(--authorCategoryDividerHoverColorFirst);
+                            }
+                        }
+                    }
+    
+                    &[data-cat-style=filled]{
+                        a{
+                            background: var(--authorCategoryDividerInitialColorFirst);
+    
+                            &:hover{
+                                background: var(--authorCategoryDividerHoverColorFirst);
+                            }
+                        }
+                    }
+                }
+    
+                &[data-position="Second"]{
+                    .cat-links{
+                        &[data-cat-style="normal"]{
+                            a{
+                                color: var(--authorCategoryDividerInitialColorSecond);
+                
+                                &:hover{
+                                    color: var(--authorCategoryDividerHoverColorSecond);
+                                }
+                            }
+                        }
+            
+                        &[data-cat-style="filled"]{
+                            a{
+                                background: var(--authorCategoryDividerInitialColorSecond);
+                
+                                &:hover{
+                                    background: var(--authorCategoryDividerHoverColorSecond);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .blank-space{
+            &[data-position="First"]{
+                margin: var(--authorDividerMarginFirst);
+            }
+
+            &[data-position="Second"]{
+                margin: var(--authorDividerMarginSecond);
+            }
+        }
+    }
+
+    .rishi-author-box{
+        margin: var(--margin) 0;
+        .author-top-wrap{
+            border: none;
+            position: relative;
+            @include flex;
+            -webkit-flex-wrap: nowrap;
+            -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+            -webkit-align-items: normal;
+            align-items: normal;
+            padding: 0;
+            width: 100%;
+            justify-content: var(--alignment);
+            @include media(sm){
+                display: block;
+            }
+            .img-holder{
+                margin: auto 0;
+                max-width: var(--width);
+                width: 100%;
+                @include media(sm){
+                    display: block;
+                    max-width: 100%;
+                    width: 100%;
+                    margin: 0;
+                    text-align: var(--alignment);
+                }
+                img{
+                    height: auto;
+                    width: 100%;
+                    @include media(sm){
+                        width: var(--width);
+                    }
+                }
+
+                &[data-avatar="square"]{
+                    img{
+                        border-radius: 0;
+                    }
+                }
+            }
+            .author-meta{
+                text-align: var(--alignment);
+                width: calc(100% - var(--width));
+                width: -moz-calc(100% - var(--width));
+                padding-left: 35px;
+                padding-right: 0;
+                @include media(sm){
+                    width: 100%;
+                    padding-left: 0;
+                    padding-right: 0;
+                    margin-top: 20px;
+                }
+
+                &:first-child{
+                    padding: 0;
+                }
+
+                .author-name, 
+                .author-description{
+                    color: var(--authorFontColor);
+                }  
+                .cb__social-box {
+                    margin-top: 24px;
+                    justify-content: var(--alignment);
+                    a {
+                        margin-top: 0;
+                    }
+                }              
+            }
+        }
+    }
+
+    .rishi-search-count{
+        .srch-results-cnt{
+            color: var(--authorFontColor);
+            margin-bottom: var(--authorMargin);
+        }
+        &[data-count="no"]{
+            display: none;
+        }
+        &[data-count="yes"]{
+            display: block;
+        }
+    }
+}

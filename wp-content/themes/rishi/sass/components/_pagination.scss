@@ -1,0 +1,128 @@
+.cb__pagination {
+  &[data-pagination="simple"] {
+    display: flex;
+    flex-wrap: wrap;
+    margin-top: 40px;
+
+    a {
+      cursor: pointer;
+    }
+
+    .page-numbers {
+      color: var(--primaryColor);
+      margin: 0 10px;
+
+      &:hover {
+        color: var(--genLinkColor);
+
+        &.next,
+        &.prev {
+          svg {
+            fill: var(--genLinkColor);
+          }
+        }
+      }
+
+      &:first-child {
+        margin-left: 0;
+      }
+
+      &:last-child {
+        margin-right: 0;
+      }
+
+      &.current {
+        background: var(--genLinkColor);
+        border-radius: 4px;
+        color: #ffffff;
+        line-height: 1;
+        padding: 8px 15px;
+      }
+
+      &.next {
+        margin-left: 20px;
+
+        svg {
+          fill: var(--primaryColor);
+          margin-left: 5px;
+          height: 12px;
+          width: 12px;
+        }
+      }
+
+      &.prev {
+        margin-right: 20px;
+
+        svg {
+          fill: var(--primaryColor);
+          margin-right: 5px;
+          height: 12px;
+          width: 12px;
+        }
+      }
+    }
+  }
+
+  // load more & infinite type
+  &[data-pagination="load_more"],
+  &[data-pagination="infinite_scroll"] {
+    justify-content: center;
+
+    .page-numbers {
+      display: none;
+    }
+
+    .cb__load-more-helper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      position: relative;
+      min-width: var(--buttonMinHeight, 45px);
+      min-height: var(--buttonMinHeight, 45px);
+
+      @media (prefers-reduced-motion: no-preference) {
+        [data-loader] {
+          opacity: 0;
+          transition: opacity 0.2s ease;
+        }
+
+        &.cb__loading {
+          [data-loader] {
+            opacity: 1;
+            animation-play-state: running;
+          }
+
+          .cb__load-more {
+            opacity: 0;
+          }
+        }
+      }
+    }
+
+    .cb__load-more {
+      z-index: 2;
+      opacity: 1;
+    }
+
+    .cb__last-page-text {
+      // display: none;
+      opacity: 0.7;
+    }
+
+    &.cb__last-page {
+
+      .cb__load-more,
+      [data-loader] {
+        display: none;
+      }
+
+      .cb__last-page-text {
+        display: flex;
+      }
+    }
+  }
+}
+
+.cb__load-more-helper {
+  margin-top: 30px;
+}

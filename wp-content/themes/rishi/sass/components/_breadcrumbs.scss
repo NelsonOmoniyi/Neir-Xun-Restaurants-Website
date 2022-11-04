@@ -1,0 +1,55 @@
+/*===============================
+Breadcrumbs
+==============================*/
+.rishi-breadcrumb-main-wrap{
+    padding: var(--padding);
+}
+.rishi-breadcrumbs{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    text-align: var(--alignment);
+    > span{
+
+        a{
+            @include transition(all ease 0.3s);
+
+            span {
+                color: var(--breadcrumbsColor);
+            } 
+
+            &:hover{
+                span{
+                    color: var(--breadcrumbsCurrentColor);
+                }
+            }
+        }
+        .separator{
+            display: inline-block;
+            margin: 0 5px;
+            line-height: 1;
+
+            svg{
+                width: calc(var(--fontSize) / 1.5);
+                height: calc(var(--fontSize) / 1.5);
+                fill: var(--breadcrumbsSeparatorColor);
+            }
+        }
+        &.current{
+            a{
+                pointer-events: none;
+                span{
+                    color: var(--breadcrumbsCurrentColor);
+                }
+            }
+        }
+    }
+}
+
+#primary{
+    .rishi-container-wrap{
+        .rishi-breadcrumb-main-wrap{
+            margin-bottom: 20px;
+        }
+    }
+}

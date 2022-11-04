@@ -1,0 +1,30 @@
+
+// Media breakpoints defined in settings
+$break-lg: 1200px !default;
+$break-md: 1024px !default;
+$break-sm: 768px !default;   
+$break-xs: 500px !default;  
+
+// Media query mixin
+@mixin media($screen){
+    
+    @if $screen == lg{
+        @media (max-width: $break-lg){
+            @content;
+        }
+    }@else if$screen == md{
+        @media (max-width: $break-md){
+            @content;
+        }
+    }@else if $screen == sm{
+        @media (max-width: $break-sm){
+            @content;
+        }
+    }@else if $screen == xs{
+        @media (max-width: $break-xs){
+            @content;
+        }
+    }
+    
+}
+ 

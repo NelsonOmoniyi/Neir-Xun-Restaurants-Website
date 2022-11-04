@@ -1,0 +1,270 @@
+/*===============================
+Error 404 Page
+==============================*/
+
+.error404{
+    #primary{
+        display: block;
+        position: relative;
+        margin: 90px 0 0;
+        @include media(sm){
+            margin: 60px 0 30px;
+        }
+    }
+
+    .rishi-container-wrap { 
+        .posts-wrap{
+            display: -webkit-box;
+            display: -moz-box;
+            display: -ms-flexbox;
+            display: -webkit-flex;
+            display: flex;
+            -webkit-flex-wrap: wrap;
+            -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+            margin-left: -15px;
+            margin-right: -15px;
+
+            article{
+                padding: 0 15px;
+
+                .post-thumb{
+                    margin-bottom: 20px;
+                }
+
+                .entry-meta-pri-wrap{
+                    padding-left: 15px;
+                    padding-right: 15px;
+                    .entry-meta-pri{
+                        padding: 0 0 10px;
+                        .cat-links {
+                            font-size: 15px;
+        
+                            a{
+                                color: var(--genLinkColor);
+                                &:hover{
+                                    color: var(--genLinkHoverColor);
+                                }
+                            }
+                        }
+                    }
+                }
+
+                .entry-header{
+                    padding-left: 15px;
+                    padding-right: 15px;
+                }
+
+                .entry-title{
+                    font-size: 1.222em;
+                    margin-bottom: 0;
+                }
+            }
+        }
+        &.col-per-1{
+            max-width: 761px;
+            margin: 0 auto;
+            width: 100%;
+            .posts-wrap article{
+                width: 100%;
+            }
+        }  
+    }
+
+    .rishi-container-wrap.col-per-2{
+        .posts-wrap{
+            article{
+                width: 50%;
+                @include media(sm){
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .rishi-container-wrap.col-per-3{
+        .posts-wrap{
+            article{
+                width: 33.33%;
+                @include media(sm){
+                    margin-bottom: 40px;
+                    width: 100%;
+                }
+            }
+        }
+    }
+
+    .rishi-container-wrap.col-per-4{
+        .posts-wrap{
+            article{
+                width: 25%;
+            }
+        }
+    }
+
+    .rt-search-results {
+        display: none;
+    }
+    &.box-layout{
+        .rishi-container-wrap{
+            background: none;
+            padding: 0;
+
+            .posts-wrap{
+                .entry-content-main-wrap {
+                    padding: 0 0 30px;
+                }
+            }
+
+        }
+    }
+    &.content-box-layout{
+        .main-content-wrapper{
+            @include media(sm){
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+        }
+    }
+}
+.go-to-blog-wrap{
+    display: block; 
+    width: 100%;
+    text-align: center;
+    margin-top: 40px;
+    
+    .go-to-blog{
+        display: inline-block;
+        padding: var(--buttonPadding);
+        border: 1px solid var(--btnBorderColor);
+        color: var(--btnTextColor);
+        background: var(--btnBgColor);
+        border-radius: var(--bottonRoundness);
+        
+        @include transition(all ease 0.3s);
+        
+        &:hover{
+            background: var(--btnBgHoverColor);
+            border-color: var(--btnBorderHoverColor);
+            color: var(--btnTextHoverColor);
+        }
+    }
+}
+.four-error-wrap{
+    @include flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-align-items: center;
+    align-items: center;
+    padding: 0 8%;
+    @include media(sm){
+        padding: 0;
+    }
+        
+    figure{
+        width: 176px;
+        @include media(sm){
+            width: 114px;
+        }
+    }
+    .four-error-content{
+        width: calc(100% - 176px);
+        width: -webkit-calc(100% - 176px);
+        width: -moz-calc(100% - 176px);
+        padding-left: 70px;
+        @include media(sm){
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    .error-title{
+        font-size: 2.66667em;
+        margin: 0;
+        @include media(sm){
+            font-size: 2.222222em;
+        }
+    }
+    .error-sub-title{
+        font-size: 1.22222em;
+        margin-top: 20px;
+        margin-bottom: 0;
+        @include media(sm){
+            font-size: 1.11111em;
+        }
+    }
+    .error-desc{
+        font-size: 1em;
+        color: var(--primaryColor);
+        margin-top: 12px;
+        margin-bottom: 0;
+    }
+}
+
+.recommended-title{
+    font-size: 1.444em;
+    margin-bottom: 46px;
+    @include media(sm){
+        font-size: 1.333333em;
+        margin-bottom: 25px;
+    }
+}
+
+.error-search-again-wrapper{
+    margin-top: 55px;
+    .error-search-inner{
+        padding: 50px 100px;
+        background: var(--baseColor);
+        @include media(sm){
+            padding: 30px 15px;
+        }
+    }
+
+    .search-form{
+        width: 100%;
+        display: block;
+        position: relative;
+        
+        input[type="search"]{
+            width: 100%;
+            height: 70px;
+            line-height: 70px;
+            padding: 0 20px;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            appearance: none;
+            border: none;
+            background: #FCFCFC;
+            @include media(sm){
+                height: 60px;
+                line-height: 60px;
+            }
+        }
+        input[type="submit"]{
+            position: absolute;
+            top: 0;
+            right: 0;
+            font-size: 0;
+            height: 70px;
+            width: 70px;
+            border: none;
+            background: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='25.86' height='26.434' viewBox='0 0 25.86 26.434'%3E%3Cpath id='icons8-search' d='M13.768,3a9.768,9.768,0,1,0,5.71,17.686l7.559,7.541,1.616-1.616-7.469-7.487A9.767,9.767,0,0,0,13.768,3Zm0,1.149a8.619,8.619,0,1,1-8.619,8.619A8.609,8.609,0,0,1,13.768,4.149Z' transform='translate(-3.5 -2.5)' fill='%23fff' stroke='%23fff' stroke-width='1'/%3E%3C/svg%3E");
+            background-repeat: no-repeat !important;
+            -webkit-background-size: 24px !important;
+            -o-background-size: 24px !important;
+            background-size: 24px !important;
+            background-position: center;
+            background-color: var(--genLinkColor);
+            border-radius: 0;
+            padding: 0;
+            @include media(sm){
+                height: 60px;
+                line-height: 60px;
+                width: 60px;
+                -webkit-background-size: 20px !important;
+                -o-background-size: 20px !important;
+                background-size: 20px !important;
+            }
+        }
+    }
+}

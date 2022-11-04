@@ -1,0 +1,164 @@
+/*===============================
+Search Page
+==============================*/
+
+.search {
+    .rishi-breadcrumb-main-wrap{
+        max-width: 770px;
+        width: 100%;
+        @include media(md){
+            max-width: 100%;;
+        }
+    }
+
+    .rishi-search-count{
+        max-width: 770px;
+        @include media(md){
+            max-width: 100%;;
+        }
+        .srch-results-cnt{
+            color: var(--searchFontColor);
+            margin-bottom: var(--searchMargin);
+        }
+
+        &[data-count="no"]{
+            display: none;
+        }
+        &[data-count="yes"]{
+            display: block;
+        }
+    }
+  
+    .entry-title{
+        font-size: var(--searchHeadingFontSize);
+    }
+
+    .posts-wrap{
+        @include flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+
+        .post-meta-wrapper{
+            .post-meta-inner{
+                .cat-links{
+                    &[data-cat-style="normal"]{
+                        a{
+                            color: var(--searchCategoryDividerInitialColorFirst);
+            
+                            &:hover{
+                                color: var(--searchCategoryDividerHoverColorFirst);
+                            }
+                        }
+                    }
+        
+                    &[data-cat-style=filled]{
+                        a{
+                            background: var(--searchCategoryDividerInitialColorFirst);
+        
+                            &:hover{
+                                background: var(--searchCategoryDividerHoverColorFirst);
+                            }
+                        }
+                    }
+                }
+        
+                &[data-position="Second"]{
+                    .cat-links{
+                        &[data-cat-style="normal"]{
+                            a{
+                                color: var(--searchCategoryDividerInitialColorSecond);
+                
+                                &:hover{
+                                    color: var(--searchCategoryDividerHoverColorSecond);
+                                }
+                            }
+                        }
+            
+                        &[data-cat-style="filled"]{
+                            a{
+                                background: var(--searchCategoryDividerInitialColorSecond);
+                
+                                &:hover{
+                                    background: var(--searchCategoryDividerHoverColorSecond);
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        }
+
+        .blank-space{
+            &[data-position="First"]{
+                margin: var(--searchDividerMarginFirst);
+            }
+
+            &[data-position="Second"]{
+                margin: var(--searchDividerMarginSecond);
+            }
+        }
+    }
+
+    &.leftsidebar {
+        #primary {
+            float: right;
+        }
+        #secondary {
+            float: left;
+        }
+    }
+    
+    &.content-box-layout {
+        .main-content-wrapper {
+            @include media(sm) {
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .search-result-wrapper {
+                @include media(sm) {
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &.blog-classic{
+        .posts-wrap{
+            display: block;
+        }
+    }
+
+    .archive-title-wrapper{
+        &[data-alignment="left"]{
+            .search-result-wrapper, .rishi-search-count, .rishi-breadcrumb-main-wrap{
+                margin-right:  auto;
+            }
+
+            .rishi-breadcrumbs {
+                text-align: left;
+            }
+        }
+
+        &[data-alignment="center"]{
+            .search-result-wrapper, .rishi-search-count, .rishi-breadcrumb-main-wrap{
+                margin-left:  auto;
+                margin-right:  auto;
+            }
+
+            .rishi-breadcrumbs {
+                text-align: center;
+            }
+        }
+
+        &[data-alignment="right"]{
+            .search-result-wrapper, .rishi-search-count, .rishi-breadcrumb-main-wrap{
+                margin-left:  auto;
+            }
+
+            .rishi-breadcrumbs {
+                text-align: right;
+            }
+        }
+    }
+}

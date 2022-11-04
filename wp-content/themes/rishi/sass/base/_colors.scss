@@ -1,0 +1,179 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+.single .entry-header .entry-title,
+.page .entry-header .entry-title,
+.blog-post-lay .entry-content-main-wrap .entry-title,
+.rishi-post .entry-title {
+    color: var(--genheadingColor);
+}
+
+::-moz-selection {
+    /* Code for Firefox */
+    color: var(--textSelectionColor);
+    background: var(--textSelectionHoverColor);
+}
+
+::selection {
+    color: var(--textSelectionColor);
+    background: var(--textSelectionHoverColor);
+}
+
+.header-search-btn svg path {
+    fill: var(--primaryColor), var(--icon-color);
+}
+
+//Link Colors
+.single .entry-header .post-meta-inner a,
+.page .entry-header .post-meta-inner a {
+    color: var(--primaryColor);
+    &:hover {
+        color: var(--genLinkHoverColor);
+    }
+}
+
+.blog-post-lay .entry-content-main-wrap .entry-title:hover {
+    color: var(--genLinkHoverColor);
+}
+
+.button,
+.wp-block-file__button,
+.wp-block-file a.wp-block-file__button {
+    color: var(--btnTextColor);
+    background: var(--btnBgColor);
+    border-color: var(--btnBorderColor);
+    &:hover,
+    &:visited,
+    &:focus {
+        color: var(--btnTextHoverColor);
+        background-color: var(--btnBgHoverColor);
+        border-color: var(--btnBorderHoverColor);
+    }
+}
+
+body,
+.cb__panel,
+[data-row],
+// .cb__footer,
+.rt-floating-bar,
+.rt-account-form,
+.rt-trending-block,
+.cb__panel .mobile-menu-list,
+.cb__panel .mobile-menus,
+.footer-widgets-area,
+.rt-comments-container,
+.rt-related-posts-container,
+.hero-section[data-type="type-2"],
+[data-structure*="boxed"]>section,
+[data-structure="boxed"] .tutor-col-8,
+[data-footer*=reveal] .site-content {
+    background-color: var(--background-color);
+    background-image: var(--overlay-color, none), var(--background-image);
+    background-size: var(--background-size);
+    background-repeat: var(--background-repeat);
+    background-position: var(--background-position);
+    background-attachment: var(--background-attachment);
+    --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+}
+
+
+/*** Theme color For editor post ********/
+
+.has-palette-color-1-color {
+    color: var(--paletteColor1) !important;
+}
+
+.has-palette-color-2-color {
+    color: var(--paletteColor2) !important;
+}
+
+.has-palette-color-3-color {
+    color: var(--paletteColor3) !important;
+}
+
+.has-palette-color-4-color {
+    color: var(--paletteColor4) !important;
+}
+
+.has-palette-color-5-color {
+    color: var(--paletteColor5) !important;
+}
+
+.has-palette-color-6-color {
+    color: var(--paletteColor6) !important;
+}
+
+.has-palette-color-7-color {
+    color: var(--paletteColor7) !important;
+}
+
+.has-palette-color-8-color {
+    color: var(--paletteColor8) !important;
+}
+
+.has-palette-color-1-background-color {
+    background-color: var(--paletteColor1) !important;
+}
+
+.has-palette-color-2-background-color {
+    background-color: var(--paletteColor2) !important;
+}
+
+.has-palette-color-3-background-color {
+    background-color: var(--paletteColor3) !important;
+}
+
+.has-palette-color-4-background-color {
+    background-color: var(--paletteColor4) !important;
+}
+
+.has-palette-color-5-background-color {
+    background-color: var(--paletteColor5) !important;
+}
+
+.has-palette-color-6-background-color {
+    background-color: var(--paletteColor6) !important;
+}
+
+.has-palette-color-7-background-color {
+    background-color: var(--paletteColor7) !important;
+}
+
+.has-palette-color-8-background-color {
+    background-color: var(--paletteColor8) !important;
+}
+
+.has-palette-color-1-border-color {
+    border-color: var(--paletteColor1) !important;
+}
+
+.has-palette-color-2-border-color {
+    border-color: var(--paletteColor2) !important;
+}
+
+.has-palette-color-3-border-color {
+    border-color: var(--paletteColor3) !important;
+}
+
+.has-palette-color-4-border-color {
+    border-color: var(--paletteColor4) !important;
+}
+
+.has-palette-color-5-border-color {
+    border-color: var(--paletteColor5) !important;
+}
+
+.has-palette-color-6-border-color {
+    border-color: var(--paletteColor6) !important;
+}
+
+.has-palette-color-7-border-color {
+    border-color: var(--paletteColor7) !important;
+}
+
+.has-palette-color-8-border-color {
+    border-color: var(--paletteColor8) !important;
+}

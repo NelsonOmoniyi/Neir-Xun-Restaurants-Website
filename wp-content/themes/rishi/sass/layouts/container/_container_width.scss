@@ -1,0 +1,42 @@
+/*===============================
+Container Width
+==============================*/
+.rightsidebar{
+    .site-main{
+        width: calc(100% - var(--contentSidebarWidth));
+        float: left;
+        padding-right: 60px;
+        @include media(md){
+            width: 100%;
+            padding-right: 0;
+        }
+    }
+    .widget-area{
+        float: right;
+        @include media(md){
+            width: 100%;
+        }
+    }
+}
+.leftsidebar{
+    .site-main{
+        width: calc(100% - var(--contentSidebarWidth));
+        float: right;
+        padding-left: 60px;
+        @include media(md){
+            width: 100%;
+            padding-left: 0;
+        }
+    }
+    .widget-area{
+        float: left;
+        @include media(md){
+            width: 100%;
+        }
+    }
+}
+.full-width{
+    .site-main{
+        width: 100%;
+    }
+}

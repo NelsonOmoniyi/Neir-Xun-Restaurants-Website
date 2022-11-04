@@ -1,0 +1,185 @@
+/*------------------------------*/
+/* CTA Widget
+/*------------------------------*/
+.meafe-clients {
+    overflow: hidden;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel) {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -15px;
+    margin-right: -15px;
+}
+
+.meafe-clients .owl-carousel .owl-item img {
+    margin: 0 auto;
+}
+
+.meafe-clients-bwyes .meafe-client img {
+    -webkit-filter: grayscale(1);
+    filter: grayscale(1);
+}
+
+.meafe-clients-bwyes .meafe-client a:hover img {
+    -webkit-filter: grayscale(0);
+    filter: grayscale(0);
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel) .meafe-client {
+    padding: 15px;
+}
+
+.meafe-clients .meafe-grid-container .meafe-client {
+    position: relative;
+    text-align: center;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-1 .meafe-client {
+    width: 100%;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-2 .meafe-client {
+    width: 50%;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-3 .meafe-client {
+    width: 33.33%;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-4 .meafe-client {
+    width: 25%;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-5 .meafe-client {
+    width: 20%;
+}
+
+.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-desktop-6 .meafe-client {
+    width: 16.66%;
+}
+
+.meafe-clients .owl-carousel .owl-nav [class*="owl-"], 
+.meafe-clients .owl-carousel .owl-nav button[class*="owl-"] {
+    position: absolute;
+    top: 50%;
+    left: 0;
+    font-size: 30px;
+    line-height: 30px;
+    min-height: auto;
+    height: 30px;
+    width: 30px;
+    -webkit-transform: translateY(-50%);
+    -moz-transform: translateY(-50%);
+    transform: translateY(-50%);
+    outline: 0;
+    outline-offset: unset;
+}
+
+.meafe-clients.owl-dots-enabled .owl-carousel .owl-nav [class*="owl-"], 
+.meafe-clients.owl-dots-enabled .owl-carousel .owl-nav button[class*="owl-"] {
+    top: 35%;
+}
+
+.meafe-clients .owl-carousel .owl-nav .owl-next, 
+.meafe-clients .owl-carousel .owl-nav button.owl-next {
+    left: auto;
+    right: 0;
+}
+
+.meafe-clients .owl-carousel .owl-dots {
+    position: static;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.meafe-clients .owl-carousel .owl-dots .owl-dot {
+    width: auto;
+    height: auto;
+    border: none;
+    background: none;
+    margin: 0;
+    padding: 5px !important;
+    max-height: initial;
+    min-height: auto;
+    line-height: 1;
+}
+
+.meafe-clients .owl-carousel .owl-dots .owl-dot span {
+    display: inline-block;
+    width: 8px;
+    height: 8px;
+    background: rgba(0,0,0,0.15);
+    border-radius: 100%;
+    -webkit-transition: all ease 0.35s;
+    -moz-transition: all ease 0.35s;
+    transition: all ease 0.35s;
+}
+
+.meafe-clients .owl-carousel .owl-dots .owl-dot:hover span, 
+.meafe-clients .owl-carousel .owl-dots .owl-dot.active span {
+    background: rgba(0,0,0,0.5);
+    width: 10px;
+    height: 10px;
+}
+
+@media screen and (max-width: 1025px) {
+    .meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-1 .meafe-client {
+        width: 100%;
+    }
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-2 .meafe-client {	    
+		width: 50%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-3 .meafe-client {
+	    width: 33.33%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-4 .meafe-client {
+	    width: 25%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-5 .meafe-client {
+	    width: 20%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-tablet-6 .meafe-client {
+	    width: 16.66%;
+	}
+}
+
+@media screen and (max-width: 767px) {
+	.meafe-clients .meafe-grid-container:not(.owl-carousel) {
+	    margin-left: -10px;
+	    margin-right: -10px;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel) .meafe-client {
+	    padding: 10px;
+    }
+    
+    .meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-1 .meafe-client {
+        width: 100%;
+    }
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-2 .meafe-client {	    
+		width: 50%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-3 .meafe-client {
+	    width: 33.33%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-4 .meafe-client {
+	    width: 25%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-5 .meafe-client {
+	    width: 20%;
+	}
+
+	.meafe-clients .meafe-grid-container:not(.owl-carousel).meafe-grid-mobile-6 .meafe-client {
+	    width: 16.66%;
+	}
+}

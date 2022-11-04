@@ -1,0 +1,13 @@
+/*===============================
+Category Page
+==============================*/
+.category{
+    &.leftsidebar{
+        #primary{
+            float: right;
+        }
+        #secondary{
+            float: left;
+        }
+    }
+}

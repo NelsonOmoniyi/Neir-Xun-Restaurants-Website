@@ -1,0 +1,138 @@
+/*===============================
+Content Box Layout
+==============================*/
+.content-box-layout{
+    .main-content-wrapper{
+        background: #FFF;
+        padding: 50px 45px;
+
+        @include media(md){
+            padding: 45px 15px;
+        }
+    }
+    .rishi-post{
+        margin-bottom: 70px;
+        @include media(sm){
+            margin-bottom: 40px;
+        }
+        &.no-post-thumbnail{
+            .list-cont-wrap{
+                padding: 0;
+            } 
+        }
+
+        &:last-of-type{
+            margin-bottom: 0;
+        }
+    }
+    &.single-post{
+        .main-content-wrapper{
+            background-color: var(--background-color);
+            background-image: var(--overlay-color, none), var(--background-image);
+            background-size: var(--background-size);
+            background-repeat: var(--background-repeat);
+            background-position: var(--background-position);
+            background-attachment: var(--background-attachment);
+            --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+            border-radius: var(--box-radius);
+            box-shadow: var(--box-shadow);
+            padding: var(--padding);
+        }
+    }
+
+    &.page{
+        .main-content-wrapper{
+            padding: var(--padding);
+        }
+    }
+
+    &.blog-classic{
+        .site-main{
+            .entry-content-main-wrap{
+                div:first-of-type.entry-content-wrap{
+                    padding-top: 0;
+                }
+            }
+            .rt-featured-image{
+                &:first-child{
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+
+    &.blog-list{
+        .rishi-post{
+            width: 100%;
+            .rt-featured-image{
+                @include media(md){
+                    margin-bottom: 30px;
+                }
+            }
+            .list-cont-wrap{
+                @include media(sm){
+                    width: 100%;
+                    padding: 0;
+                }
+            }
+        }
+    }
+
+    &.blog-grid-masonry{
+        .rishi-post{
+            &:last-of-type{
+                margin-bottom: 0;
+            }
+        }
+        .navigation.pagination .nav-links{
+            margin-top: 17px;
+            margin-bottom: 60px;
+        }
+        .site-main{
+            .entry-content-main-wrap{
+                .cat-links{
+                    padding-top: 0;
+                }
+                
+                .post-thumb + .cat-links{
+                    padding-top: 21px;
+                }
+                .post-thumb + .entry-header .entry-title{
+                    padding-top: 25px;
+                }
+                .post-thumb + .entry-content-wrap{
+                    padding-top: 25px;
+                }
+                .entry-content-wrap + .cat-links{
+                    padding-top: 10px;
+                }
+                .entry-content-wrap + .entry-header .entry-title{
+                    padding-top: 15px;
+                }
+            }
+        }
+    }
+
+    &.blog-grid,
+    &.blog-grid-masonry{
+        .main-content-wrapper{
+            .rishi-container-wrap{
+                margin-left: -15px;
+                margin-right: -15px;
+            }
+            .rishi-post{
+                padding: 0 15px;
+            }
+        }
+        .site-main{
+            .entry-content-main-wrap{
+                .rt-featured-image{
+                    margin: 0 0 10px;
+                    &:first-of-type{
+                        margin-top: 0;
+                    }
+                } 
+            }
+        }
+    }
+}

@@ -1,0 +1,77 @@
+/***** Scroll to top ******/
+
+.to_top {
+    cursor: pointer;
+    display: none;
+    position: fixed;
+    bottom: calc(var(--frame-size, 0px) + var(--topButtonOffset, 25px));
+    z-index: 99;
+
+    &.active{
+        display: block;
+    }
+
+    span {
+        -webkit-align-items: center;
+        align-items: center;
+        background: var(--topButtonShapeBackgroundDefault);
+        border-style: solid;
+        border-width: var(--top-button-border);
+        border-color: var(--topButtonBorderDefaultColor);
+        -webkit-border-radius: var(--top-button-border-radius);
+        border-radius: var(--top-button-border-radius);
+        box-shadow: var(--topButtonShadow);
+        font-size: var(--topButtonSize);
+        color: var(--topButtonIconColorDefault);
+        -webkit-justify-content: center;
+        justify-content: center;
+        padding: var(--top_button_padding);
+        @include flex;
+        -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+        @include transition(all ease 0.3s);
+        &:hover {
+            color : var(--topButtonIconColorHover);
+            background: var(--topButtonShapeBackgroundHover);
+            border-color: var(--topButtonBorderHoverColor);
+            svg{
+                stroke: var(--topButtonIconColorHover);
+            }
+        }
+    }
+
+    .icon-arrow-up-line{
+        svg {
+            fill: none;
+            height: 1em;
+            stroke: var(--topButtonIconColorDefault);
+            width: 1em;
+        }
+    } 
+
+    &[data-button-alignment="right"] {
+        right: calc(var(--frame-size, 0px) + var(--sideButtonOffset, 25px));
+    }
+
+    &[data-button-alignment="left"] {
+        left: calc(var(--frame-size, 0px) + var(--sideButtonOffset, 25px));
+    }
+
+    &[data-icon-shape="circle"] span {
+        border-radius: 100%;
+    }
+
+    &[data-scroll-style="outline"] span {
+        background: none;
+    }
+
+    &[data-button-type="type-4"]{
+        .icon-arrow-up-line{
+            svg {
+                fill: currentColor;
+                stroke: none;
+            }
+        } 
+    } 
+}

@@ -1,0 +1,355 @@
+/*===============================
+Navigation Menu
+==============================*/
+
+.menu {
+    display: flex;
+    -webkit-flex-wrap: wrap;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    list-style-type: none;
+    --listItemSpacing: 0;
+    --contentSpacing: 0;
+    margin: 0;
+    >li {
+        >a {
+            color: var(--linkInitialColor);
+            white-space: normal;
+            justify-content: center;
+            height: var(--menu-item-height, 100%);
+            --menu-item-padding: 0 calc(var(--menu-items-spacing, 50px) / 2);
+            transition: 0.3s ease all;
+        }
+        a:not(:empty) {
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            position: relative;
+            text-align: initial;
+            padding: var(--menu-item-padding, 0px);
+            border-radius: var(--menu-item-radius, 0px);
+            transition: 0.3s ease all;
+        }
+    }
+    .menu-item {
+        .child-indicator {
+            display: inline-flex;
+            margin-left: 10px;
+            margin-top: 2px;
+            background: transparent;
+            color: var(--linkInitialColor);
+            border: none;
+            padding: 0;
+            svg {
+                fill: currentColor;
+            }
+        }
+    }
+}
+
+.animated-submenu {
+    .sub-menu {
+        position: absolute;
+        z-index: 10;
+        top: calc(var(--top, 100%) - 35px);
+        min-width: 100px;
+        margin-top: var(--dropdown-top-offset, 0);
+        border-radius: var(--border-radius);
+        list-style: none;
+        width: var(--dropdown-width, 200px);
+        background-color: var(--background-color);
+        box-shadow: var(--box-shadow);
+        --menu-item-padding: var(--dropdown-items-spacing, 13px) calc(var(--dropdown-items-spacing, 13px) * 1.5);
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.2s ease, visibility 0.2s ease, transform 0.2s ease;
+        padding: 0;
+        &:before {
+            position: absolute;
+            content: "";
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: var(--dropdown-top-offset, 0);
+            transform: translateY(-100%);
+        }
+        li {
+            border-top: var(--dropdown-divider);
+            padding: var(--menu-item-padding, 0px);
+            &:first-child {
+                border-top: none;
+            }
+        }
+        li {
+            a {
+                justify-content: space-between;
+                padding: 0 10px 0 00;
+                .child-indicator {
+                    margin-left: auto;
+                    position: absolute;
+                    right: 0;
+                    svg {
+                        transform: rotate(270deg);
+                    }
+                }
+            }
+        }
+    }
+}
+
+[data-menu] {
+    >ul {
+        >li {
+            display: flex;
+            align-items: center;
+            ul {
+                ul {
+                    top: 0 !important;
+                    margin-top: 0 !important;
+                    right: -5px;
+                    margin-right: -100%;
+                }
+            }
+            &:last-child,
+            &:nth-last-child(2) {
+                ul {
+                    ul {
+                        top: 0;
+                        margin-top: 0;
+                        right: -5px;
+                        left: auto;
+                        margin-left: auto;
+                        margin-right: -100%;
+                    }
+                }
+            }
+            a {
+                &:before,
+                &:after {
+                    position: absolute;
+                    left: var(--menu-indicator-left, 0);
+                    right: var(--menu-indicator-right, 0);
+                    margin: var(--menu-indicator-margin, 0);
+                    height: var(--menu-indicator-height, 2px);
+                    opacity: var(--menu-indicator-opacity, 0);
+                    background-color: var(--menu-indicator-active-color, var(--paletteColor2));
+                    transition: opacity 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955), width 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955), height 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955), top 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955), bottom 0.12s cubic-bezier(0.455, 0.03, 0.515, 0.955);
+                }
+                &:before {
+                    top: var(--menu-indicator-y-position, 0);
+                }
+                &:after {
+                    bottom: var(--menu-indicator-y-position, 0);
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-1"] {
+    >ul {
+        >li {
+            &:first-child {
+                >a {
+                    padding-left: 0;
+                }
+            }
+            &:last-child {
+                >a {
+                    padding-right: 0;
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-2"] {
+    >ul {
+        >li {
+            --menu-indicator-width: 0;
+            --menu-indicator-margin: 0 auto;
+            a {
+                height: var(--menu-item-height);
+                &:after {
+                    content: "";
+                    width: var(--menu-indicator-width, 100%);
+                }
+            }
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    --menu-indicator-opacity: 1;
+                    --menu-indicator-width: calc(100% - var(--menu-items-spacing, 50px));
+                }
+            }
+        }
+    }
+}
+
+[data-menu="type-2:default"] {
+    >ul {
+        >li {
+            a {
+                &:after {
+                    transition: none;
+                }
+            }
+        }
+    }
+}
+
+[data-menu="type-2:left"] {
+    >ul {
+        >li {
+            --menu-indicator-opacity: 1;
+            --menu-indicator-left: calc(var(--menu-items-spacing) / 2);
+            --menu-indicator-width: 0;
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    --menu-indicator-width: calc(100% - var(--menu-items-spacing, 50px));
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-3"] {
+    >ul {
+        >li {
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    color: var(--colorHoverType3);
+                    background-color: var(--menu-indicator-active-color, var(--paletteColor2));
+                    height: var(--menu-item-height);
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-4"] {
+    >ul {
+        >li {
+            a {
+                &:after {
+                    --menu-indicator-y-position: 10px;
+                    content: "";
+                }
+            }
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    background: var(--activeIndicatorbackgroundColor);
+                    height: var(--menu-item-height, 100%);
+                    &:after {
+                        --menu-indicator-y-position: 0px;
+                        opacity: 1;
+                    }
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-5"] {
+    >ul {
+        >li {
+            --menu-indicator-width: 0;
+            --menu-indicator-margin: 0 auto;
+            a {
+                &:after {
+                    content: "";
+                    width: 5px;
+                    height: 5px;
+                    border-radius: 100%;
+                    bottom: -7px;
+                }
+            }
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    --menu-indicator-opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-6"],
+[data-menu*="type-8"] {
+    >ul {
+        >li {
+            --menu-indicator-width: 0;
+            --menu-indicator-margin: 0 auto;
+            --menu-indicator-left: calc(var(--menu-items-spacing, 50px) / 2);
+            --menu-indicator-right: calc(var(--menu-items-spacing, 50px) / 2);
+            a {
+                &:before,
+                &:after {
+                    content: "";
+                    border-radius: 100%;
+                    position: absolute;
+                    top: auto;
+                    bottom: auto;
+                    // margin: 0 5px 0 0;
+                }
+                &:before {
+                    left: calc(var(--menu-indicator-left, 0) - 10px);
+                    right: auto;
+                }
+                &:after {
+                    left: auto;
+                    right: calc(var(--menu-indicator-right, 0) - 10px);
+                }
+            }
+            &[class*="current-menu-item"],
+            &:hover {
+                >a {
+                    --menu-indicator-opacity: 1;
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-7"] {
+    >ul {
+        >li {
+            --menu-indicator-width: 0;
+            --menu-indicator-margin: 0 auto;
+            a {
+                height: var(--menu-item-height);
+                &:after {
+                    content: "";
+                    width: calc(var(--menu-indicator-width, 100%) + 8px);
+                    bottom: auto;
+                }
+            }
+            &[class*="current-menu-"],
+            &:hover {
+                >a {
+                    --menu-indicator-opacity: 1;
+                    --menu-indicator-width: calc(100% - var(--menu-items-spacing, 50px));
+                }
+            }
+        }
+    }
+}
+
+[data-menu*="type-6"]>ul>li a {
+    &:before,
+    &:after {
+        width: 5px;
+        height: 5px;
+    }
+}
+
+[data-menu*="type-8"]>ul>li a {
+    &:before,
+    &:after {
+        width: 5px;
+        height: 2px;
+    }
+}

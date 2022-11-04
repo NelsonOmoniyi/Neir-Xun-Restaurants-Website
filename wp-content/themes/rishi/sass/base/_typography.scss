@@ -1,0 +1,158 @@
+/*--------------------------------------------------------------
+# Typography
+--------------------------------------------------------------*/
+
+body,
+input,
+select,
+optgroup,
+textarea {
+    color: var(--primaryColor);
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-style: var(--fontStyle, inherit);
+    font-weight: var(--fontWeight, normal);
+    line-height: var(--lineHeight);
+    letter-spacing: var(--letterSpacing);
+    text-transform: var(--textTransform);
+    text-decoration: var(--textDecoration);
+}
+
+button,
+.submit,
+input[type=button],
+input[type=reset],
+input[type=submit],
+.go-to-blog,
+.wp-block-button__link {
+    font-family: var(--btnFontFamily);
+    font-size: var(--btnFontSize);
+    font-weight: var(--btnFontWeight);
+    font-style: var(--btnFontStyle);
+    line-height: var(--btnLineHeight);
+    letter-spacing: var(--btnLetterSpacing);
+    text-transform: var(--btnTextTransform);
+    text-decoration: var(--btnTextDecoration);
+}
+
+.woocommerce #respond input#submit:hover,
+.woocommerce a.button:hover,
+.woocommerce button.button:hover,
+.woocommerce input.button:hover {
+    text-decoration: var(--btnTextDecoration);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    margin-top: 0;
+    margin-bottom: 15px;
+}
+
+p {
+    margin-bottom: 1.333em;
+    margin-top: 0;
+}
+
+dfn,
+cite,
+em,
+i {
+    font-style: italic;
+}
+
+address {
+    margin: 0 0 1.5em;
+}
+
+html,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+pre,
+kbd,
+code,
+samp,
+label,
+figcaption,
+blockquote,
+blockquote p,
+.wp-block-pullquote p,
+.menu a,
+.cb__label,
+.entry-meta,
+.widget-title,
+.contact-info,
+.rt-item-title,
+.entry-excerpt,
+.rt-post-title,
+.rt-breadcrumbs,
+.rt-header-text,
+.site-description,
+.page-description,
+.comment-reply-title,
+.cb__footer-copyright,
+.rt-language-switcher,
+.entry-summary .price,
+.rishi-breadcrumb-main-wrap .rishi-breadcrumbs,
+.rt-language-switcher ul[data-placement],
+.rt-widget>*:not(.widget-title),
+.wp-block-file .wp-block-file__button {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-weight: var(--fontWeight);
+    font-style: var(--fontStyle, inherit);
+    line-height: var(--lineHeight);
+    letter-spacing: var(--letterSpacing);
+    text-transform: var(--textTransform);
+    text-decoration: var(--textDecoration);
+}
+
+.button,
+.cb__button,
+.cb__button-ghost,
+.forminator-design--none .forminator-button,
+button[type="submit"]:not(.qubely-block-btn-anchor) {
+    color: var(--buttonTextInitialColor);
+    background-color: var(--buttonInitialColor);
+    border-color: var(--buttonInitialColor);
+    font-family: var(--btnFontFamily);
+    font-size: var(--btnFontSize);
+    font-weight: var(--btnFontWeight);
+    font-style: var(--btnFontStyle);
+    line-height: var(--btnLineHeight);
+    letter-spacing: var(--btnLetterSpacing);
+    text-transform: var(--btnTextTransform);
+    text-decoration: var(--btnTextDecoration);
+    position: relative;
+    z-index: 1;
+    &:hover {
+        color: var(--buttonTextHoverColor);
+        background-color: var(--buttonHoverColor);
+        border-color: var(--buttonHoverColor);
+    }
+}
+
+.site-title,
+.site-description {
+    font-family: var(--fontFamily);
+    font-size: var(--fontSize);
+    font-style: var(--fontStyle, inherit);
+    font-weight: var(--fontWeight);
+    letter-spacing: var(--letterSpacing);
+    line-height: var(--lineHeight);
+    text-decoration: var(--textDecoration);
+    text-transform: var(--textTransform);
+}
+
+abbr,
+acronym {
+    border-bottom: 1px dotted var(--genborderColor);
+    cursor: help;
+}

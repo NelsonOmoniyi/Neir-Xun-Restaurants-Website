@@ -1,0 +1,112 @@
+/*===============================
+Full Width
+==============================*/
+.single-post.full-width{
+    .entry-categories,
+    .rishi-entry-header-inner .entry-title,
+    .post-meta-wrapper{
+        text-align: center;
+    }
+
+    .rishi-entry-header-inner .post-meta-inner{
+        -webkit-justify-content: center;
+        justify-content: center;
+    }
+
+    &.default-layout{
+        .post-inner-wrap,
+        .post-footer-meta-wrap,
+        .autor-section,
+        .post-navigation,
+        .comments-area{
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+        }
+    }
+}
+
+.single.full-width.centered{
+    .rishi-breadcrumb-main-wrap,
+    .post-meta-wrapper,
+    .entry-title,
+    .post-inner-wrap, 
+    .post-footer-meta-wrap, 
+    .post-navigation, 
+    .comments-area, 
+    .autor-section{
+        max-width: var(--containerContentMaxWidth);
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+    }
+}
+
+.page.full-width.centered{
+    .rishi-breadcrumb-main-wrap,.rishi-post .entry-header, .rishi-post .entry-content, 
+    .entry-footer,
+    .comments-area, 
+    .autor-section{
+        max-width: var(--containerContentMaxWidth);
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
+
+.elementor-page.full-width.page,
+.elementor-page.full-width.centered.page{
+    .site-content .rishi-container,
+    .rishi-post .entry-content,
+    .rishi-breadcrumb-main-wrap,
+    .entry-header,
+    .entry-footer{
+        max-width: 100%;
+        padding: 0;
+        width:100%;
+    }
+} 
+
+//align full-width image
+.full-width{
+    .alignfull, .entry-content .alignfull {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        max-width: 100vw;
+        width: 100vw;
+        padding-left: 0;
+        padding-right: 0;
+        clear: both;
+    }
+    &.centered{
+       
+        .alignwide, .entry-content .alignwide{
+            
+                margin-left: calc(var(--wideWith) / 2);
+                margin-right: calc(var(--wideWith) / 2);
+                padding: 0 15px;
+                --wideWith: calc(var(--containerContentMaxWidth) - var(--containerWidth));
+                clear: both;
+                @media(max-width:1024px){
+                    margin-left: calc(var(--wideWith) / 3);
+                    margin-right: calc(var(--wideWith) / 3);
+                }
+                
+                @media(max-width:992px){
+                    margin-left: calc(var(--wideWith) / 2.05);
+                    margin-right: calc(var(--wideWith) / 2.05);
+                }
+               
+                @media(max-width:768px){
+                    margin-left: calc(var(--wideWith) / 3.8);
+                    margin-right: calc(var(--wideWith) / 3.8);
+                }
+        }   
+        
+    }
+}
+
+.full-width:not(.elementor-page){
+    .site-content{
+        overflow-x: hidden;
+    }
+}

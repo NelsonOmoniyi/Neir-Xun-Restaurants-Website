@@ -1,0 +1,40 @@
+/*--------------------------------------------------------------
+# Forms
+--------------------------------------------------------------*/
+button,.submit,input[type="button"],input[type="reset"],input[type="submit"] {
+    display: inline-block;
+    color: var(--btnTextColor);
+    background: var(--btnBgColor);
+    padding: var(--buttonPadding);
+    border: 1px solid var(--btnBorderColor);
+    border-radius: var(--bottonRoundness);
+    @include transition(all ease 0.2s);
+    cursor: pointer;
+    outline: none;
+}
+
+button:hover,.submit:hover,input[type="button"]:hover,input[type="reset"]:hover,input[type="submit"]:hover,button:focus,input[type="button"]:focus,input[type="reset"]:focus,input[type="submit"]:focus {
+	color: var(--btnTextHoverColor);
+    background: var(--btnBgHoverColor);
+    border-color: var(--btnBorderHoverColor);
+}
+
+input[type="text"],input[type="email"],input[type="url"],input[type="password"],input[type="search"], .wp-block-search input[type="search"],input[type="number"],input[type="tel"],input[type="range"],input[type="date"],input[type="month"],input[type="week"],input[type="time"],input[type="datetime"],input[type="datetime-local"],input[type="color"],textarea {
+	border: 1px solid var(--genborderColor);
+	border-radius: 0;
+	padding: 15px;
+	outline: none;
+}
+
+select {
+	border: 1px solid #E0E0E0;
+}
+
+textarea {
+	width: 100%;
+	height: 150px;
+	resize: none;
+}
+.affwp-form input:checked {
+    background: var(--e-global-color-rishi3);
+}

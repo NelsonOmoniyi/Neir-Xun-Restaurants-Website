@@ -1,0 +1,87 @@
+/***** Page Setting ******/
+
+.page{
+    .main-content-wrapper{
+        .entry-header{
+            text-align: var( --alignment );
+            margin-bottom : var( --margin-bottom );
+        }
+
+        &[data-page-spacing="top:bottom"]{
+            margin-bottom: var(--containerVerticalMargin);
+            margin-top: var(--containerVerticalMargin);
+        }
+
+        &[data-page-spacing="top"]{
+            margin-bottom: 0;
+            margin-top: var(--containerVerticalMargin);
+        }
+
+        &[data-page-spacing="bottom"]{
+            margin-bottom: var(--containerVerticalMargin);
+            margin-top: 0;
+        }
+
+        &[data-page-spacing="none"]{
+            margin: 0;
+        }
+    }
+
+    &.box-layout{
+        .site-main {
+            .rishi-container-wrap{
+                background-color: var(--background-color);
+                background-image: var(--overlay-color, none), var(--background-image);
+                background-size: var(--background-size);
+                background-repeat: var(--background-repeat);
+                background-position: var(--background-position);
+                background-attachment: var(--background-attachment);
+                --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+                border-radius: var(--box-radius);
+                box-shadow: var(--box-shadow);
+                padding: var(--padding);
+                .rishi-post{
+                    padding-top: 0;
+                }
+            }
+        }
+    }
+
+    &.content-box-layout{
+        .main-content-wrapper{
+            background-color: var(--background-color);
+            background-image: var(--overlay-color, none), var(--background-image);
+            background-size: var(--background-size);
+            background-repeat: var(--background-repeat);
+            background-position: var(--background-position);
+            background-attachment: var(--background-attachment);
+            --overlay-color: linear-gradient(var(--overlay), var(--overlay));
+            border-radius: var(--box-radius);
+            box-shadow: var(--box-shadow);
+            padding: var(--padding);
+        }
+        .rishi-container-wrap{
+            .rishi-post{
+                padding-top: 0;
+            }
+        }
+    }
+}
+
+.elementor-page.elementor-template-full-width{
+    .site-content{
+        .rishi-container{
+            max-width: 100%;
+            padding: 0;
+            width:100%;
+
+            .rishi-post{
+                .entry-content{
+                    max-width: 100%;
+                    padding: 0;
+                    width:100%;
+                }
+            }
+        }
+    }
+}
